@@ -1,0 +1,69 @@
+@import url('https://fonts.bunny.net/css2?family=Sora:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 22% 8%;
+    --foreground: 210 40% 98%;
+    --card: 224 20% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 20% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 25 95% 65%;
+    --primary-foreground: 210 40% 2%;
+    --secondary: 215 27% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 27% 17%;
+    --muted-foreground: 217 10% 64%;
+    --accent: 25 95% 65%;
+    --accent-foreground: 210 40% 2%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27% 17%;
+    --input: 215 27% 17%;
+    --ring: 25 95% 65%;
+    --radius: 0.5rem;
+    --chart-1: 25 95% 65%;
+    --chart-2: 45 93% 58%;
+    --chart-3: 65 84% 60%;
+    --chart-4: 85 85% 55%;
+    --chart-5: 105 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-jost;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+  }
+}
+
+@layer utilities {
+  .font-sora {
+    font-family: 'Sora', sans-serif;
+  }
+
+  .font-jost {
+    font-family: 'Jost', sans-serif;
+  }
+
+  .gradient-mesh {
+    background: radial-gradient(circle at 20% 80%, rgba(25, 25, 25, 0.8) 0%, transparent 70%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 82, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at 40% 40%, rgba(245, 158, 82, 0.05) 0%, transparent 70%);
+  }
+
+  .tech-grid {
+    background-image:
+      linear-gradient(rgba(245, 158, 82, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 158, 82, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
